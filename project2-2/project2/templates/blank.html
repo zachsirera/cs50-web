@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    
+{% endblock %}
+
+
+
+{% block head %}
+	
+{% endblock %}
+
+
+
+{% block main %}
+	<div class="container">
+		<form action="/" method="post">
+			<input type="text" id="test" placeholder="test text">
+			<button type="submit"> Submit </button>
+		</form>
+	</div>
+
+	<p> {{ test }} </p>
+{% endblock %}

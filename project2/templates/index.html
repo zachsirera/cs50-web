@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+
+
+{% block title %}
+    Home
+{% endblock %}
+
+
+
+{% block head %}
+
+<<<<<<< HEAD
+<script>
+
+	window.onload = function {
+		var username = localStorage.getItem('username');
+		if username != None {
+
+		}
+
+	}
+
+	function username(uname) {
+		localStorage.setItem('username', uname);
+	}
+
+
+</script>
+
+=======
+>>>>>>> f985de0b0521d9ee0be9d25c559887ae76e1c9f2
+{% endblock %}
+
+
+
+{% block main %}
+    <h4> Welcome to Flack. </h4>
+    <br>
+	<form action="/" method="post">
+		<div class="form-group">
+			<label for="display_name">
+				Choose a Display Name
+			</label>
+			<input type="text" class="form-control" id="display_name" aria-describedby="display_name_help" placeholder="Enter Display Name Here">
+			<small id="display_name_help" class="form-text text-muted">
+				Names may consist of letters and numbers only. No special characters or spaces are allowed. 
+			</small>
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+
+<<<<<<< HEAD
+	<div id="names">
+		<h3> These names are already taken. </h3>
+		<ul>
+			{% for name in names %}
+				<li> {{ name }} </li>
+			{% endfor %}
+		</ul>
+	</div>
+
+=======
+>>>>>>> f985de0b0521d9ee0be9d25c559887ae76e1c9f2
+{% endblock %}

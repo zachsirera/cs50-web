@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+    <style>
+        #logout {
+            display: none;
+        }
+    </style>
+{% block head %}
+    
+{% endblock %}
+
+{% block main %}
+    <h4> Log in to access our extensive book review database </h4>
+    <br>
+    <form action="/login" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text"/>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password"/>
+        </div>
+        <button class="btn btn-primary" type="submit"> Log In </button>
+    </form>
+
+    <br> <br>
+
+    <p> Not a member? </p>
+    
+    <a href="/register"> Register to get access to our content </a>
+{% endblock %}

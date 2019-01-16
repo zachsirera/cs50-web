@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> {% block title %}{% endblock %} </title>
+
+	<!-- Required metatags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8"/>
+
+	{% block head %}{% endblock %}
+
+	<!-- Link to Boostrap's CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!-- Link to Zach's CSS -->
+	<link rel="stylesheet" href="/static/style.css">
+<<<<<<< HEAD
+
+	<!-- Reuired Flask SocketIO scripts -->
+	<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+	
+	<script type="text/javascript" charset="utf-8">
+	    var socket = io.connect('http://' + document.domain + ':' + location.port);
+	    socket.on('connect', function() {
+	        socket.emit('my event', {data: 'I\'m connected!'});
+	    });
+	</script>
+
+	
+=======
+>>>>>>> f985de0b0521d9ee0be9d25c559887ae76e1c9f2
+</head>
+<body>
+
+
+	<main class="container p-5">
+            {% block main %}{% endblock %}
+    </main>
+
+</body>
+</html>

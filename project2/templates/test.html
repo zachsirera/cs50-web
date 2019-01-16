@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Channel List
+{% endblock %}
+
+
+
+{% block head %}
+	
+{% endblock %}
+
+
+
+{% block main %}
+	
+	<form action="/test" method="post">
+		<div class="form-group">
+			<input type="text" class="form-control" id="test" aria-describedby="display_name_help" placeholder="Enter test string here ">
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+
+	 <div class="alert alert-warning" role="alert">
+  		<strong> {{ test }} </strong> 
+	</div>
+{% endblock %}

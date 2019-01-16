@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Book
+{% endblock %}
+
+{% block head %}
+	<style>
+	
+		#login {
+			display: none;
+		}
+
+		#register {
+			display: none;
+		}
+
+	</style>
+{% endblock %}
+
+{% block main %}
+	{% if review_submitted %}
+		<div class="alert alert-success" role="alert">
+  			Review Submitted!
+		</div>
+	{% endif %}
+	<h2> {{ title }} </h2>
+	<p> {{ author }} - published {{ year }} </p>
+	<p> ISBN: {{ isbn }} </p>
+	<div class="container">
+  		<div class="row">
+  			{% if review_made %}
+    		<div class="col">
+				<h4> Here is what you had to say about this book: </h4>
+				<br>
+				<h4> Rating: </h4>
+				<p> {{ rating }} </p>
+				<br>
+				<h4> Review: </h4>
+				<p> {{ review }} </p>
+			</div>
+			{% else %}
+			<div class="col">
+				<h4> Have you read this book? Submit a review </h4>
+				<form action="{{ url_for('review', isbn=isbn) }}" method="post"> 
+					<div class="form-group">
+						<label for="exampleFormControlSelect2"> Rating </label>
+						<select multiple class="form-control" id="exampleFormControlSelect2" name="user_rating">
+							<option> 1 </option>
+							<option> 2 </option>
+							<option> 3 </option>
+							<option> 4 </option>
+							<option> 5 </option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="exampleFormControlTextarea1"> Type your review here </label>
+		    			<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="user_review"></textarea>
+		    		</div>
+		    		<button class="btn btn-primary" type="submit"> Submit Review </button>
+		    	</form>
+		    </div>
+			{% endif %}
+    		<div class="col">
+	      		<h4> Here is what Goodreads users had to say: </h4>
+	      		<h6> Average rating: {{ average_rating }} </h6>
+	      		<h6> Number of reviews: {{ reviews_count }} </h6>
+    		</div>
+  		</div>
+  	</div>
+	
+{% endblock %}

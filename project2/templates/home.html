@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    Home
+{% endblock %}
+
+
+
+{% block head %}
+	
+{% endblock %}
+
+
+
+{% block main %}
+    <h3> Hello, {{ name }}. </h3>
+
+    <form action="/chat" method="post">
+		<div class="form-group">
+			<label for="channel">
+				Create a channel
+			</label>
+			<input type="text" class="form-control" id="new_channel" aria-describedby="new_channel_help" placeholder="Enter Channel Name Here">
+			<small id="display_name_help" class="form-text text-muted">
+				Names may consist of letters and numbers only. No special characters or spaces are allowed. 
+			</small>
+		</div>
+		<button type="submit" class="btn btn-primary">Create</button>
+	</form>
+
+	<br> 
+
+	<h3> Or </h3>
+
+	<form action="/chat" method="post">
+		<div class="form-group">
+			<label for="channel">
+				Join an existing channel
+			</label>
+			<select class="form-control" id="existing_channel">
+				{% for channel in channel_list %}
+					<option> {{ channel.name }} </option>
+				{% endfor %}
+			</select>
+		</div>
+		<button type="submit" class="btn btn-primary">Join</button>
+	</form>		
+
+{% endblock %}

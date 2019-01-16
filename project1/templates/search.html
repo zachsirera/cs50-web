@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search
+{% endblock %}
+
+{% block head %}
+	<style>
+	
+	#login {
+		display: none;
+	}
+
+	#register {
+		display: none;
+	}
+
+
+	</style>
+{% endblock %}
+
+{% block main %}
+	<h4> Search our records </h4>
+	<p> You can enter your search terms below or you can search from any page by using our navigation bar. </p>
+	<form action="/search" method="post">
+		<div class="form-group">
+			<input autocomplete="off" autofocus class="form-control" name="user_search" placeholder="Search our library" type="text"/>
+		</div>
+		<button class="btn btn-primary" type="submit"> Search </button>
+	</form>
+    
+{% endblock %}

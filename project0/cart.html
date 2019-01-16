@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Cart - Zach's Burger Shop </title>
+
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap's stylesheet reference -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!-- Zach's custom CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		img {
+			filter: opacity(50%);
+		}
+	</style>
+
+</head>
+<body>
+	<h1>  </h1>
+	<h6> Baton Rouge, LA &#8226; New Orleans, LA &#8226; Anchorage, AK </h6>
+
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="home.html">Home</a>
+	  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		    <div class="navbar-nav">
+		      <a class="nav-item nav-link active" href="menu.html"> Menu <span class="sr-only">(current)</span></a>
+		      <a class="nav-item nav-link" href="cart.html"> Cart </a>
+		      <a class="nav-item nav-link" href="contact_us.html"> Contact Us </a>
+		      <a class="nav-item nav-link disabled" href="home.html"> About </a>
+		    </div>
+	  	</div>
+	</nav>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm">
+				<table class="table">
+					<thead>
+						<tr> 
+							<th scope="col"> Item </th>
+							<th scope="col"> Calories </th>
+							<th scope="col"> Price </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr> 
+							<td scope="row"> 
+								<img class="cart_image" src="white_bun.jpg"> Regular White Bun
+							</td>
+							<td> 150 </td>
+							<td> $1.00 </td>
+						</tr>
+						<tr> 
+							<td scope="row"> 
+								<img class="cart_image" src="hamburger_patty.jpg"> 1/4 lb Ground Beef Patty
+							</td>
+							<td> 200 </td>
+							<td> $2.00 </td>
+						</tr>
+						<tr>
+							<td scope="row"> 
+								<img class="cart_image" src="lettuce_bun.jpg"> Lettuce
+							</td>
+							<td> 0 </td>
+							<td> $0.25 </td>
+						</tr>
+						<tr> 
+							<td scope="row"> 
+								<img class="cart_image" src="tomato.jpeg"> Tomato 
+							</td>
+							<td> 50 </td>
+							<td> $0.50 </td>
+						</tr>
+						<tr> 
+							<td scope="row">
+								<img class="cart_image" src="onion.jpeg"> Onion 
+							</td>
+							<td> 15 </td>
+							<td> $0.50 </td>
+						</tr>
+						<tr> 
+							<td scope="row">
+								<img class="cart_image" src="pickle.jpg"> Pickle 
+							</td>
+							<td> 15 </td>
+							<td> $0.50 </td>
+						</tr>
+						<tr> 
+							<td scope="row">
+								<img class="cart_image" src="mayonnaise.jpeg"> Mayonaise
+							</td>
+							<td> 100 </td>
+							<td> $0.25 </td>
+						</tr>
+						<tr> 
+							<td scope="row"> 
+								<img class="cart_image" src="mustard.jpg"> Mustard 
+							</td>
+							<td> 5 </td>
+							<td> $0.50 </td>
+						</tr>
+						<tr> 
+							<td scope="row">
+								<img class="cart_image" src="ketchup.jpg"> Ketchup 
+							</td>
+							<td> 80 </td>
+							<td> $0.50 </td>
+						</tr>
+						<tr> 
+							<td scope="row">
+								<img class="cart_image" src="special sauce.jpg"> Special Sauce 
+							</td>
+							<td> 100 </td>
+							<td> $0.50 </td>
+						</tr>
+						<tr>
+							<th> Total </th>
+							<th> 715 </th>
+							<th> $6.50 </th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+				<div class="col-sm" style="background-color: #dbdee1; height: 500px" >
+					<br>
+					<div class="dropdown">
+  						<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    						Payment Type
+  						</button>
+  						<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+    						<button class="dropdown-item" type="button"> American Express </button>
+    						<button class="dropdown-item" type="button"> MasterCard </button>
+    						<button class="dropdown-item" type="button"> Visa </button>
+  						</div>
+  					</div>
+					<br>
+					<form>
+				  		<div class="form-group">
+				    		<h6> Payment Information </h6>
+				    		<br>
+				    		<input type="number" class="form-control" id="card" aria-describedby="emailHelp" placeholder="Card Number">
+				  		</div>
+				  		<div class="form-row">
+	    					<div class="col">
+	      						<input type="date" class="form-control" placeholder="Exp. Date">
+	    					</div>
+	    					<div class="col">
+	      						<input type="text" class="form-control" placeholder="CVV">
+	    					</div>
+	  					</div>
+	  				</form>
+  					<br>
+  					<form>
+				  		<div class="form-group">
+				    		<h6> Delivery Information </h6>
+				    		<br>
+				    		<input type="text" class="form-control" id="card" aria-describedby="emailHelp" placeholder="Street Address">
+				  		</div>
+				  		<div class="form-row">
+	    					<div class="col">
+	      						<input type="text" class="form-control" placeholder="City">
+	    					</div>
+	    					<div class="col">
+	      						<input type="text" class="form-control" placeholder="State">
+	    					</div>
+	  					</div>
+	  				</form>
+	  				<br>
+					<a class="btn btn-secondary" href="confirmation.html" role="button">Submit Order</a>
+				</div>
+				<div class="col-sm" style="background-color: #dbdee1; height: 500px">
+					<br>
+					<a class="btn btn-secondary" href="menu.html" role="button">Return to Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

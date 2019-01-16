@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search Results
+{% endblock %}
+
+{% block head %}
+	<style>
+	
+	#login {
+		display: none;
+	}
+
+	#register {
+		display: none;
+	}
+
+	</style>
+{% endblock %}
+
+{% block main %}
+    <h4> Click on the title of any book to see its review </h4>
+    <br>
+    <p> Your search returned {{ Number }} results
+    <table class="table table-striped" style="width:100%">
+        <tr>
+            <th> ISBN </th>
+            <th> Title </th>
+            <th> Author </th>
+            <th> Publication Year </th>
+        </tr>
+    {% for book in Books %}
+        <tr>
+            <td> {{ book[0] }} </td>
+            <td> 
+                <a href="{{ url_for('book', isbn=book[0]) }}">
+                    {{ book[1] }} 
+                </a>
+            </td>
+            <td> {{ book[2] }} </td>
+            <td> {{ book[3] }} </td>
+        </tr>
+    {% endfor %}
+    </table>
+{% endblock %}
